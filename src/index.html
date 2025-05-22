@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>LineHaus || Clothing Brand</title>
+    <link rel="icon" type="image/x-icon" href="images/LineHaus.png">
+
+    <!--CSS-->
+    <link href="./output.css" rel="stylesheet">
+    <link href="./general.css" rel="stylesheet">
+
+    <!--JavaScript-->
+    <script src="main.js" defer></script>
+  </head>
+
+  <body class="m-0 p-0">
+
+    <!--Header/Nav Bar-->
+    <div class="flex justify-between items-center text-xs md:text-base lg:text-lg w-full h-20 bg-white sticky top-0 place-self-center px-4 md:py-4 md:px-6 shadow-black drop-shadow-lg z-100">
+
+      <div class="header-items-wrapper flex justify-between items-center w-full md:max-w-[1400px] mx-auto">
+      <a class="md:hidden"><img class="w-8 min-w-8 cursor-pointer" src="images/hamburger.svg"></a>
+      
+      <div class="flex justify-between">
+        <a><img class="w-full max-w-30 cursor-pointer" src="images/LineHaus.png"></a>
+
+        <div class="hidden md:flex justify-center place-self-center">
+          <a class="pr-5 lg:pr-8 ml-2 lg:ml-6" href="#">New & Featured</a>
+          <a class="pr-5 lg:pr-8" href="#">Men's</a>
+          <a class="pr-5 lg:pr-8" href="#">Women's</a>
+          <a class="pr-5 lg:pr-8" href="#">Accessories</a>
+        </div>
+      </div>
+
+      <div class="flex justify-between place-self-center">
+        
+        <!--Search Bar-->
+        <div class="hidden md:flex justify-between bg-gray-300 rounded-full px-2 py-1 h-[40px] w-[300px] relative shadow-black drop-shadow-md">
+          <input class="" placeholder="Search">
+          <img class="absolute right-2 top-2" src="images/search.svg">
+        </div>
+
+        <a><img class="w-8 min-w-8 cursor-pointer hidden md:block ml-1" src="images/profile.svg"></a>
+
+        <a><img class="w-8 min-w-8 cursor-pointer md:ml-2" src="images/cart.svg"></a>
+      </div>
+      </div>
+
+    </div>
+
+    <!--Hero Section-->
+    <div class="hero-wrapper bg-primary mt-0 pt-0">
+      <div id="slider" class="flex text-center pb-0 place-self-center h-100 md:min-h-150 md:h-auto transition-transform duration-500 ease-in-out">
+
+        <img id="heroImage" class="hero-image object-top min-h-fit w-full md:h-auto md:min-w-1/3" src="images/hero-photo-1.webp">
+        <img id="heroImage" class="hero-image hidden md:block w-full min-w-1/3 h-100 md:h-auto" src="images/hero-photo-2.png">
+        <img id="heroImage" class="hero-image hidden md:block w-full min-w-1/3 h-100 md:h-auto" src="images/hero-photo-3.jpg">
+
+      </div>
+    </div>
+
+    <!--Collections-->
+    <div id="collection-container" class="flex flex-col text-center">
+
+      <!--First Collection-->
+      <h1 class="bg-secondary pt-10 font-bold text-2xl">Featured Items</h1>
+
+      <div class="flex justify-center p-3 bg-secondary py-10">
+        <div class="relative flex justify-center overflow-hidden scroll-smooth">
+
+          <button class="prevBtn absolute -left-2 top-1/2 transform -translate-y-1/2 z-10 bg-transparent border-0 p-2 cursor-pointer">
+            <img src="images/back-arrow.svg">
+          </button>
+
+          <!--Carousel of Items-->
+          <div class="carousel flex transition-transform duration-500 ease-in-out">
+
+            <a class="carousel-item flex flex-col py-2 px-5">
+              <img class="w-60 shadow-black drop-shadow-md" src="images/Featured/Item1/image-1.webp">
+              <div class="p-2 font-semibold text-md">Natasha Sandals</div>
+              <div class="mt-4 flex flex-row justify-between px-1">
+                <p class="font-semibold text-xl">$115</p>
+                <button class="py-1 px-4 bg-pop text-white rounded-full cursor-pointer shadow-gray-600 shadow-md">Add</button>
+              </div>
+            </a>
+
+            <a class="carousel-item flex-col py-2 px-5">
+              <img class="w-60 shadow-black drop-shadow-md" src="images/Featured/Item2/image-1.webp">
+              <div class="p-2 font-semibold text-md">In Ur Web Weekender Bag</div>
+              <div class="mt-4 flex flex-row justify-between px-1">
+                <p class="font-semibold text-xl">$65</p>
+                <button class="py-1 px-4 bg-pop text-white rounded-full cursor-pointer shadow-gray-600 shadow-md">Add</button>
+              </div>
+            </a>
+
+            <a class="carousel-item flex-col py-2 px-5">
+              <img class="w-60 shadow-black drop-shadow-md" src="images/Featured/Item3/image-1.webp">
+              <div class="p-2 font-semibold text-md">Amulet Backpack</div>
+              <div class="mt-4 flex flex-row justify-between px-1">
+                <p class="font-semibold text-xl">$70</p>
+                <button class="py-1 px-4 bg-pop text-white rounded-full cursor-pointer shadow-gray-600 shadow-md">Add</button>
+              </div>
+            </a>
+
+            <a class="carousel-item flex-col py-2 px-5">
+              <img class="w-60 shadow-black drop-shadow-md" src="images/Featured/Item4/image-1.webp">
+              <div class="p-2 font-semibold text-md">Vampir: Witchcraft Plush Toy</div>
+              <div class="mt-4 flex flex-row justify-between px-1">
+                <p class="font-semibold text-xl">$30</p>
+                <button class="py-1 px-4 bg-pop text-white rounded-full cursor-pointer shadow-gray-600 shadow-md">Add</button>
+              </div>
+            </a>
+
+            <a class="carousel-item flex-col py-2 px-5">
+              <img class="w-60 shadow-black drop-shadow-md" src="images/Featured/Item5/image-1.webp">
+              <div class="p-2 font-semibold text-md">Vipersong Flair</div>
+              <div class="mt-4 flex flex-row justify-between px-1">
+                <p class="font-semibold text-xl">$75</p>
+                <button class="py-1 px-4 bg-pop text-white rounded-full cursor-pointer shadow-gray-600 shadow-md">Add</button>
+              </div>
+            </a>
+
+          </div>
+
+          <button class="nextBtn absolute -right-3 top-1/2 transform -translate-y-1/2 z-10 bg-transparent border-0 p-2 cursor-pointer">
+            <img src="images/forward-arrow.svg">
+          </button>
+
+        </div>
+      </div>
+
+      <!--Second Collection-->
+      <h1 class="bg-secondary pt-10 font-bold text-2xl">Accessories</h1>
+
+      <div class="flex justify-center p-3 bg-secondary py-10">
+        <div class="relative flex align-center justify-center overflow-hidden scroll-smooth">
+          
+          <button class="prevBtn prev absolute -left-2 top-1/2 transform -translate-y-1/2 z-10 bg-transparent border-0 p-2 cursor-pointer">
+            <img src="images/back-arrow.svg">
+          </button>
+
+          <!--Carousel of Items-->
+          <div class="carousel flex transition-transform duration-300 ease-in-out">
+
+            <a class="carousel-item flex flex-col py-2 px-5">
+              <img class="w-60 shadow-black drop-shadow-md" src="images/Accessories/Item1/image-1.webp">
+              <div class="p-2 font-semibold text-md">Resurrection Earrings</div>
+              <div class="mt-4 flex flex-row justify-between px-1">
+                <p class="font-semibold text-xl">$28</p>
+                <button class="py-1 px-4 bg-pop text-white rounded-full cursor-pointer shadow-gray-600 shadow-md">Add</button>
+              </div>
+            </a>
+
+            <a class="carousel-item flex-col py-2 px-5">
+              <img class="w-60 shadow-black drop-shadow-md" src="images/Accessories/Item2/image-1.webp">
+              <div class="p-2 font-semibold text-md">Tabinka Hair Bow</div>
+              <div class="mt-4 flex flex-row justify-between px-1">
+                <p class="font-semibold text-xl">$10</p>
+                <button class="py-1 px-4 bg-pop text-white rounded-full cursor-pointer shadow-gray-600 shadow-md">Add</button>
+              </div>
+            </a>
+
+            <a class="carousel-item flex-col py-2 px-5">
+              <img class="w-60 shadow-black drop-shadow-md" src="images/Accessories/Item3/image-1.webp">
+              <div class="p-2 font-semibold text-md">Crypta Sunglasses</div>
+              <div class="mt-4 flex flex-row justify-between px-1">
+                <p class="font-semibold text-xl">$20</p>
+                <button class="py-1 px-4 bg-pop text-white rounded-full cursor-pointer shadow-gray-600 shadow-md">Add</button>
+              </div>
+            </a>
+
+            <a class="carousel-item flex-col py-2 px-5">
+              <img class="w-60 shadow-black drop-shadow-md" src="images/Accessories/Item4/image-1.webp">
+              <div class="p-2 font-semibold text-md">Noctloom Backpack</div>
+              <div class="mt-4 flex flex-row justify-between px-1">
+                <p class="font-semibold text-xl">$60</p>
+                <button class="py-1 px-4 bg-pop text-white rounded-full cursor-pointer shadow-gray-600 shadow-md">Add</button>
+              </div>
+            </a>
+
+            <a class="carousel-item flex-col py-2 px-5">
+              <img class="w-60 shadow-black drop-shadow-md" src="images/Accessories/Item5/image-1.webp">
+              <div class="p-2 font-semibold text-md">Gremlins Cassette Handbag</div>
+              <div class="mt-4 flex flex-row justify-between px-1">
+                <p class="font-semibold text-xl">$48</p>
+                <button class="py-1 px-4 bg-pop text-white rounded-full cursor-pointer shadow-gray-600 shadow-md">Add</button>
+              </div>
+            </a>
+
+          </div>
+
+          <button class="nextBtn next absolute -right-3 top-1/2 transform -translate-y-1/2 z-10 bg-transparent border-0 p-2 cursor-pointer">
+            <img src="images/forward-arrow.svg">
+          </button>
+
+        </div>
+      </div>
+
+      <!--Middle Hero Image-->
+      <div class="flex flex-col flex-wrap md:flex-row md:flex-nowrap justify-center items-center bg-primary">
+        <img class="hero-image h-150 md:h-auto" src="images/brand-statement-image.webp">
+      </div>
+
+      <!--Third Collection-->
+      <h1 class="bg-secondary pt-10 font-bold text-2xl">Men's Clothing</h1>
+
+      <div class="relative flex justify-center p-3 bg-secondary py-10">
+        <div class="relative flex justify-center overflow-hidden scroll-smooth">
+
+          <button class="prevBtn absolute -left-2 top-1/2 transform -translate-y-1/2 z-10 bg-transparent border-0 p-2 cursor-pointer">
+            <img src="images/back-arrow.svg">
+          </button>
+
+          <!--Carousel of Items-->
+          <div class="carousel flex transition-transform duration-500 ease-in-out">
+
+            <a class="carousel-item flex flex-col py-2 px-5">
+              <img class="w-60 shadow-black drop-shadow-md" src="images/Men/Item1/image-1.webp">
+              <div class="p-2 font-semibold text-md">Brander's Torment Joggers</div>
+              <div class="mt-4 flex flex-row justify-between px-1">
+                <p class="font-semibold text-xl">$65</p>
+                <button class="py-1 px-4 bg-pop text-white rounded-full cursor-pointer shadow-gray-600 shadow-md">Add</button>
+              </div>
+            </a>
+
+            <a class="carousel-item flex-col py-2 px-5">
+              <img class="w-60 shadow-black drop-shadow-md" src="images/Men/Item2/image-1.webp">
+              <div class="p-2 font-semibold text-md">Skellie Sweater</div>
+              <div class="mt-4 flex flex-row justify-between px-1">
+                <p class="font-semibold text-xl">$55</p>
+                <button class="py-1 px-4 bg-pop text-white rounded-full cursor-pointer shadow-gray-600 shadow-md">Add</button>
+              </div>
+            </a>
+
+            <a class="carousel-item flex-col py-2 px-5">
+              <img class="w-60 shadow-black drop-shadow-md" src="images/Men/Item3/image-1.webp">
+              <div class="p-2 font-semibold text-md">Play Pals Toys T-Shirt</div>
+              <div class="mt-4 flex flex-row justify-between px-1">
+                <p class="font-semibold text-xl">$35</p>
+                <button class="py-1 px-4 bg-pop text-white rounded-full cursor-pointer shadow-gray-600 shadow-md">Add</button>
+              </div>
+            </a>
+
+            <a class="carousel-item flex-col py-2 px-5">
+              <img class="w-60 shadow-black drop-shadow-md" src="images/Men/Item4/image-1.webp">
+              <div class="p-2 font-semibold text-md">Soul Card T-Shirt</div>
+              <div class="mt-4 flex flex-row justify-between px-1">
+                <p class="font-semibold text-xl">$30</p>
+                <button class="py-1 px-4 bg-pop text-white rounded-full cursor-pointer shadow-gray-600 shadow-md">Add</button>
+              </div>
+            </a>
+
+            <a class="carousel-item flex-col py-2 px-5">
+              <img class="w-60 shadow-black drop-shadow-md" src="images/Men/Item5/image-1.webp">
+              <div class="p-2 font-semibold text-md">Midnight Snacks Graphic Vest</div>
+              <div class="mt-4 flex flex-row justify-between px-1">
+                <p class="font-semibold text-xl">$30</p>
+                <button class="py-1 px-4 bg-pop text-white rounded-full cursor-pointer shadow-gray-600 shadow-md">Add</button>
+              </div>
+            </a>
+
+          </div>
+
+          <button class="nextBtn absolute -right-3 top-1/2 transform -translate-y-1/2 z-10 bg-transparent border-0 p-2 cursor-pointer">
+            <img src="images/forward-arrow.svg">
+          </button>
+
+        </div>
+      </div>
+
+      <!--Fourth Collection-->
+      <h1 class="bg-secondary pt-10 font-bold text-2xl">Women's Clothing</h1>
+
+      <div class="relative flex justify-center p-3 bg-secondary py-10">
+        <div class="relative flex justify-center overflow-hidden scroll-smooth">
+
+          <button class="prevBtn absolute -left-2 top-1/2 transform -translate-y-1/2 z-10 bg-transparent border-0 p-2 cursor-pointer">
+            <img src="images/back-arrow.svg">
+          </button>
+
+          <!--Carousel of Items-->
+          <div class="carousel flex transition-transform duration-500 ease-in-out">
+
+            <a class="carousel-item flex flex-col py-2 px-5">
+              <img class="w-60 shadow-black drop-shadow-md" src="images/Women/Item1/image-1.webp">
+              <div class="p-2 font-semibold text-md">The Vampurr Pleated Skirt</div>
+              <div class="mt-4 flex flex-row justify-between px-1">
+                <p class="font-semibold text-xl">$53</p>
+                <button class="py-1 px-4 bg-pop text-white rounded-full cursor-pointer shadow-gray-600 shadow-md">Add</button>
+              </div>
+            </a>
+
+            <a class="carousel-item flex-col py-2 px-5">
+              <img class="w-60 shadow-black drop-shadow-md" src="images/Women/Item2/image-1.webp">
+              <div class="p-2 font-semibold text-md">Purr Evil Tee</div>
+              <div class="mt-4 flex flex-row justify-between px-1">
+                <p class="font-semibold text-xl">$35</p>
+                <button class="py-1 px-4 bg-pop text-white rounded-full cursor-pointer shadow-gray-600 shadow-md">Add</button>
+              </div>
+            </a>
+
+            <a class="carousel-item flex-col py-2 px-5">
+              <img class="w-60 shadow-black drop-shadow-md" src="images/Women/Item3/image-1.webp">
+              <div class="p-2 font-semibold text-md">Emerald Envy Mini Dress</div>
+              <div class="mt-4 flex flex-row justify-between px-1">
+                <p class="font-semibold text-xl">$63</p>
+                <button class="py-1 px-4 bg-pop text-white rounded-full cursor-pointer shadow-gray-600 shadow-md">Add</button>
+              </div>
+            </a>
+
+            <a class="carousel-item flex-col py-2 px-5">
+              <img class="w-60 shadow-black drop-shadow-md" src="images/Women/Item4/image-1.webp">
+              <div class="p-2 font-semibold text-md">Splendidly Evil Baby Tee</div>
+              <div class="mt-4 flex flex-row justify-between px-1">
+                <p class="font-semibold text-xl">$35</p>
+                <button class="py-1 px-4 bg-pop text-white rounded-full cursor-pointer shadow-gray-600 shadow-md">Add</button>
+              </div>
+            </a>
+
+            <a class="carousel-item flex-col py-2 px-5">
+              <img class="w-60 shadow-black drop-shadow-md" src="images/Women/Item5/image-1.webp">
+              <div class="p-2 font-semibold text-md">Cruriosus Trousers</div>
+              <div class="mt-4 flex flex-row justify-between px-1">
+                <p class="font-semibold text-xl">$65</p>
+                <button class="py-1 px-4 bg-pop text-white rounded-full cursor-pointer shadow-gray-600 shadow-md">Add</button>
+              </div>
+            </a>
+
+          </div>
+
+          <button class="nextBtn absolute -right-3 top-1/2 transform -translate-y-1/2 z-10 bg-transparent border-0 p-2 cursor-pointer">
+            <img src="images/forward-arrow.svg">
+          </button>
+
+        </div>
+      </div>
+    </div>
+
+    <!--Newsletter Signup-->
+    <div class="flex flex-col justify-center px-5 py-40 text-center bg-secondary w-full place-items-center">
+
+      <h1 class="my-2 font-bold">
+        Sign up for our Newsletter!
+      </h1>
+
+      <input class="border-2 my-4 w-full max-w-[600px] px-3 py-2 bg-white" placeholder="Name">
+
+      <input class="border-2 my-0 w-full max-w-[600px] px-3 py-2 bg-white" placeholder="Email">
+
+      <div class="flex flex-row max-w-[400px] items-center">
+
+        <input class="border-2 my-4 mx-2 max-w-20 relative top-0.5" type="checkbox">
+
+        <div class="text-xs">
+          By checking this box, I agree to the terms of service
+        </div>
+
+      </div>
+
+      <button class="my-2 px-3 py-2 bg-pop rounded-full w-full max-w-[200px] text-white shadow-gray-600 shadow-md cursor-pointer">
+        Sign up
+      </button>
+
+    </div>
+
+    <!--Footer-->
+    <div class="grid grid-cols-2 md:grid-cols-4 pt-15 bg-primary text-white justify-top pb-20 px-3">
+
+      <div class="flex flex-col flex-wrap justify-top mb-10">
+        <h1 class="font-bold text-base mb-4 md:text-xl">Customer Service</h1>
+        <a class="text-sm mb-3 md:text-lg">Contact Us</a>
+        <a class="text-sm mb-3 md:text-lg">Order Status</a>
+        <a class="text-sm mb-3 md:text-lg">Shipping</a>
+        <a class="text-sm mb-3 md:text-lg">Returns</a>
+        <a class="text-sm mb-3 md:text-lg">Product Guides</a>
+      </div>
+
+      <div class="flex flex-col flex-wrap justify-top mb-10 ml-3">
+        <h1 class="font-bold text-base mb-4 md:text-xl">My Account</h1>
+        <a class="text-sm mb-3 md:text-lg">Sign In</a>
+        <a class="text-sm mb-3 md:text-lg">My Account</a>
+        <a class="text-sm mb-3 md:text-lg">Update Password</a>
+        <a class="text-sm mb-3 md:text-lg">Gift Cards</a>
+        <a class="text-sm mb-3 md:text-lg">Account Balance</a>
+      </div>
+
+      <div class="flex flex-col flex-wrap justify-top">
+        <h1 class="font-bold text-base mb-4 md:text-xl">About LineHaus</h1>
+        <a class="text-sm mb-3 md:text-lg">Community</a>
+        <a class="text-sm mb-3 md:text-lg">Sustainability</a>
+        <a class="text-sm mb-3 md:text-lg">Careers</a>
+        <a class="text-sm mb-3 md:text-lg">Affiliate Program</a>
+        <a class="text-sm mb-3 md:text-lg">Inclusion & Belonging</a>
+      </div>
+
+      <div class="flex flex-col flex-wrap justify-top ml-3">
+        <h1 class="font-bold text-base mb-4 md:text-xl">Shop LineHaus</h1>
+        <a class="text-sm mb-3 md:text-lg">New & Featured</a>
+        <a class="text-sm mb-3 md:text-lg">Email Sign-up</a>
+        <a class="text-sm mb-3 md:text-lg">LineHaus Coupons</a>
+        <a class="text-sm mb-3 md:text-lg">Store Locator</a>
+        <a class="text-sm mb-3 md:text-lg">Rebates</a>
+      </div>
+
+    </div>
+
+  </body>
+
+</html>
