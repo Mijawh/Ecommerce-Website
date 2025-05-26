@@ -1,3 +1,10 @@
 .hero-image {
   object-fit: cover;
 }
+
+.newsletter {
+  background-image: url('images/newsletter-background.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
