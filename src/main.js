@@ -1,9 +1,9 @@
 // Hero Image Automatic Carousel
 document.addEventListener("DOMContentLoaded", function () {
   const images = [
-    "images/hero-photo-1.webp",
-    "images/hero-photo-2.png",
-    "images/hero-photo-3.jpg"
+    "./src/images/hero-photo-1.webp",
+    "./src/images/hero-photo-2.png",
+    "./src/images/hero-photo-3.jpg"
   ];
 
   let currentIndex = 0;
