@@ -1,3 +1,5 @@
+import {products} from './products.js';
+
 // Hero Image Automatic Carousel
 document.addEventListener("DOMContentLoaded", function () {
   const images = [
@@ -132,4 +134,46 @@ hamburgerItems.forEach((item) => {
     offScreenMenu.classList.toggle('hidden');
     offScreenMenu.classList.toggle('menu-transition');
   });
+});
+
+function createItemElements(product) {
+
+  let productHTML = '';
+
+  productHTML += 
+  `
+    <a class="carousel-item flex flex-col mx-1 py-4 px-5 bg-[#b5b5b5] rounded-xl">
+      <img class="w-60 shadow-black drop-shadow-md rounded-sm" src="${product.image}">
+      <div class="p-2 font-semibold text-md">${product.name}</div>
+      <div class="mt-4 flex flex-row justify-between px-1">
+        <p class="font-semibold text-xl">$${product.price}</p>
+        <button class="py-1 px-4 bg-[#450d0d] text-white rounded-full cursor-pointer shadow-[#7b7b7b] shadow-sm">Add</button>
+      </div>
+    </a>
+  `
+  return productHTML;
+}
+
+let featuredHTML = '';
+let accessoriesHTML = '';
+let mensHTML = '';
+let womensHTML = '';
+
+products.forEach((product) => {
+
+  if (product.section === 'featured') {
+    featuredHTML += createItemElements(product);
+    document.querySelector('.featured-carousel').innerHTML = featuredHTML;
+  } else if (product.section === 'accessories') {
+    accessoriesHTML += createItemElements(product);
+    document.querySelector('.accessories-carousel').innerHTML = accessoriesHTML;
+  } else if (product.section === 'mens') {
+    mensHTML += createItemElements(product);
+    document.querySelector('.mens-carousel').innerHTML = mensHTML;
+  } else if (product.section === 'womens') {
+    womensHTML += createItemElements(product);
+    document.querySelector('.womens-carousel').innerHTML = womensHTML;
+  }
+  
+
 });
