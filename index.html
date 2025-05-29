@@ -22,20 +22,33 @@
     <!--Header/Nav Bar-->
     <div class="flex justify-between items-center text-xs md:text-base lg:text-lg w-full h-20 bg-white sticky top-0 place-self-center px-4 md:py-4 md:px-6 shadow-black drop-shadow-lg z-100">
 
+      <!--Left Section-->
       <div class="header-items-wrapper flex justify-between items-center w-full md:max-w-[1400px] mx-auto">
-      <a class="md:hidden"><img class="w-8 min-w-8 cursor-pointer" src="./src/images/hamburger.svg"></a>
+      <a class="md:hidden"><img class="hamburger w-8 min-w-8 cursor-pointer" src="./src/images/hamburger.svg"></a>
+
+      <!--Hamburger Menu-->
+      <div class="off-screen-menu hidden pt-10 bg-secondary">
+        <div class="flex flex-col justify-between">
+          <a class="hamburger-item pb-5 cursor-pointer" href="#featured">New & Featured</a>
+          <a class="hamburger-item pb-5 cursor-pointer" href="#accessories">Accessories</a>
+          <a class="hamburger-item pb-5 cursor-pointer" href="#mens">Men's</a>
+          <a class="hamburger-item pb-5 cursor-pointer" href="#womens">Women's</a>
+        </div>
+      </div>
       
+      <!--Middle Section-->
       <div class="flex justify-between">
         <a><img class="w-full max-w-30 cursor-pointer" src="./src/images/LineHaus.png"></a>
 
         <div class="hidden md:flex justify-center place-self-center">
-          <a class="pr-5 lg:pr-8 ml-2 lg:ml-6" href="#">New & Featured</a>
-          <a class="pr-5 lg:pr-8" href="#">Men's</a>
-          <a class="pr-5 lg:pr-8" href="#">Women's</a>
-          <a class="pr-5 lg:pr-8" href="#">Accessories</a>
+          <a class="pr-5 lg:pr-8 ml-2 lg:ml-6" href="#featured">New & Featured</a>
+          <a class="pr-5 lg:pr-8" href="#accessories">Accessories</a>
+          <a class="pr-5 lg:pr-8" href="#mens">Men's</a>
+          <a class="pr-5 lg:pr-8" href="#womens">Women's</a>
         </div>
       </div>
 
+      <!--Right Section-->
       <div class="flex justify-between place-self-center">
         
         <!--Search Bar-->
@@ -67,6 +80,7 @@
     <div id="collection-container" class="flex flex-col text-center">
 
       <!--First Collection-->
+      <div id="featured" class="h-20 bg-secondary"></div>
       <h1 class="bg-secondary pt-10 font-bold text-2xl">Featured Items</h1>
 
       <div class="flex justify-center p-3 bg-secondary py-10">
@@ -134,6 +148,7 @@
       </div>
 
       <!--Second Collection-->
+      <div id="accessories" class="h-20 bg-secondary"></div>
       <h1 class="bg-secondary pt-10 font-bold text-2xl">Accessories</h1>
 
       <div class="flex justify-center p-3 bg-secondary py-10">
@@ -206,6 +221,7 @@
       </div>
 
       <!--Third Collection-->
+      <div id="mens" class="h-20 bg-secondary"></div>
       <h1 class="bg-secondary pt-10 font-bold text-2xl">Men's Clothing</h1>
 
       <div class="relative flex justify-center p-3 bg-secondary py-10">
@@ -273,6 +289,7 @@
       </div>
 
       <!--Fourth Collection-->
+      <div id="womens" class="h-20 bg-secondary"></div>
       <h1 class="bg-secondary pt-10 font-bold text-2xl">Women's Clothing</h1>
 
       <div class="relative flex justify-center px-3 bg-secondary pt-10 pb-30">
@@ -341,7 +358,7 @@
     </div>
 
     <!--Newsletter Signup-->
-    <div class="newsletter py-40 md:px-20 w-full place-items-center flex flex-col md:flex-row justify-between">
+    <div class="newsletter py-40 px-4 md:px-20 w-full place-items-center flex flex-col md:flex-row justify-between">
       <div class="flex flex-col justify-center text-center px:5 md:py-15 bg-secondary mx-4 w-full max-w-[800px] place-items-center rounded-xl border-6 border-pop">
 
         <h1 class="my-2 font-bold md:text-3xl">

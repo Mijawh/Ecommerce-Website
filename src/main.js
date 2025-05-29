@@ -116,3 +116,20 @@ document.addEventListener("DOMContentLoaded", () => {
     prevBtn.addEventListener("click", () => animateShift('prev'));
   });
 });
+
+// Hamburger Menu
+const hamburger = document.querySelector('.hamburger');
+const offScreenMenu = document.querySelector('.off-screen-menu');
+const hamburgerItems = document.querySelectorAll('.hamburger-item');
+
+hamburger.addEventListener('click', () => {
+  offScreenMenu.classList.toggle('hidden');
+  offScreenMenu.classList.toggle('menu-transition');
+});
+
+hamburgerItems.forEach((item) => {
+  item.addEventListener('click', () => {
+    offScreenMenu.classList.toggle('hidden');
+    offScreenMenu.classList.toggle('menu-transition');
+  })
+});
