@@ -131,5 +131,5 @@ hamburgerItems.forEach((item) => {
   item.addEventListener('click', () => {
     offScreenMenu.classList.toggle('hidden');
     offScreenMenu.classList.toggle('menu-transition');
-  })
+  });
 });
