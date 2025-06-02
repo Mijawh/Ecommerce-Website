@@ -136,6 +136,15 @@ hamburgerItems.forEach((item) => {
   });
 });
 
+// Cart Menu
+const cartButton = document.querySelector('.cart-js');
+const cartMenu = document.querySelector('.cart-sidebar');
+
+cartButton.addEventListener('click', () => {
+  cartMenu.classList.toggle('hidden');
+  cartMenu.classList.toggle('menu-transition');
+});
+
 function createItemElements(product) {
 
   let productHTML = '';

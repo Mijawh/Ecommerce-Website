@@ -33,3 +33,13 @@ html {
   display: flex;
   transition: 1s ease;
 }
+
+.cart-sidebar {
+  position: fixed;
+  height: 100vh;
+  bottom: -100vh;
+  right: 0;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}

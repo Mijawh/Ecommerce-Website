@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html id="home">
 
   <head>
 
@@ -24,43 +24,102 @@
 
       <!--Left Section-->
       <div class="header-items-wrapper flex justify-between items-center w-full md:max-w-[1400px] mx-auto">
-      <a class="md:hidden"><img class="hamburger w-8 min-w-8 cursor-pointer" src="./src/images/hamburger.svg"></a>
+        <a class="md:hidden"><img class="hamburger w-8 min-w-8 cursor-pointer" src="./src/images/hamburger.svg"></a>
 
-      <!--Hamburger Menu-->
-      <div class="off-screen-menu hidden pt-10 bg-secondary">
-        <div class="flex flex-col justify-between">
-          <a class="hamburger-item pb-5 cursor-pointer" href="#featured">New & Featured</a>
-          <a class="hamburger-item pb-5 cursor-pointer" href="#accessories">Accessories</a>
-          <a class="hamburger-item pb-5 cursor-pointer" href="#mens">Men's</a>
-          <a class="hamburger-item pb-5 cursor-pointer" href="#womens">Women's</a>
+        <!--Hamburger Menu-->
+        <div class="off-screen-menu hidden pt-10 bg-secondary">
+          <div class="flex flex-col justify-between">
+            <a class="hamburger-item pb-5 cursor-pointer" href="#featured">New & Featured</a>
+            <a class="hamburger-item pb-5 cursor-pointer" href="#accessories">Accessories</a>
+            <a class="hamburger-item pb-5 cursor-pointer" href="#mens">Men's</a>
+            <a class="hamburger-item pb-5 cursor-pointer" href="#womens">Women's</a>
+          </div>
         </div>
-      </div>
       
-      <!--Middle Section-->
-      <div class="flex justify-between">
-        <a><img class="w-full max-w-30 cursor-pointer" src="./src/images/LineHaus.png"></a>
+        <!--Middle Section-->
+        <div class="flex justify-between">
+          <a href="#home"><img class="w-full max-w-30 cursor-pointer" src="./src/images/LineHaus.png"></a>
 
-        <div class="hidden md:flex justify-center place-self-center">
-          <a class="pr-5 lg:pr-8 ml-2 lg:ml-6" href="#featured">New & Featured</a>
-          <a class="pr-5 lg:pr-8" href="#accessories">Accessories</a>
-          <a class="pr-5 lg:pr-8" href="#mens">Men's</a>
-          <a class="pr-5 lg:pr-8" href="#womens">Women's</a>
-        </div>
-      </div>
-
-      <!--Right Section-->
-      <div class="flex justify-between place-self-center">
-        
-        <!--Search Bar-->
-        <div class="hidden md:flex justify-between bg-gray-300 rounded-full px-2 py-1 h-[40px] w-[300px] relative shadow-black drop-shadow-md">
-          <input class="" placeholder="Search">
-          <img class="absolute right-2 top-2" src="./src/images/search.svg">
+          <div class="hidden md:flex justify-center place-self-center">
+            <a class="pr-5 lg:pr-8 ml-2 lg:ml-6" href="#featured">New & Featured</a>
+            <a class="pr-5 lg:pr-8" href="#accessories">Accessories</a>
+            <a class="pr-5 lg:pr-8" href="#mens">Men's</a>
+            <a class="pr-5 lg:pr-8" href="#womens">Women's</a>
+          </div>
         </div>
 
-        <a><img class="w-8 min-w-8 cursor-pointer hidden md:block ml-1" src="./src/images/profile.svg"></a>
+        <!--Right Section-->
+        <div class="flex justify-between place-self-center">
+          
+          <!--Search Bar-->
+          <div class="hidden md:flex justify-between bg-gray-300 rounded-full px-2 py-1 h-[40px] w-[300px] relative shadow-black drop-shadow-md">
+            <input class="" placeholder="Search">
+            <img class="absolute right-2 top-2" src="./src/images/search.svg">
+          </div>
 
-        <a><img class="w-8 min-w-8 cursor-pointer md:ml-2" src="./src/images/cart.svg"></a>
-      </div>
+          <a><img class="w-8 min-w-8 cursor-pointer hidden md:block ml-1" src="./src/images/profile.svg"></a>
+
+          <a class="cart-js"><img class="w-8 min-w-8 cursor-pointer md:ml-2" src="./src/images/cart.svg"></a>
+        </div>
+
+        <!--Shopping Cart-->
+        <div class="cart-sidebar hidden w-full md:max-w-[500px] bg-secondary overflow-y-scroll">
+          <div class="text-2xl font-semibold mb-5">Shopping Cart</div>
+
+          <div class="cart-items flex flex-col">
+
+            <div class="flex bg-[#b5b5b5] justify-between place-items-center my-2 p-1 rounded-md shadow-[#a5a5a5] shadow-md">
+              <img class="w-30 min-w-30 h-45 object-left rounded-sm" src="src/images/Featured/Item1/image-1.webp">
+              <div class="cart-item-details h-30 flex-[100%] object-right flex flex-col justify-between ml-5 p-2">
+                <div class="text-center text-wrap text-md">Natasha Sandals</div>
+                <div class="text-right text-lg font-bold">$115</div>
+                <div class="flex justify-between">
+                  <button class="cursor-pointer w-fit text-gray-500 text-sm text-left">Remove</button>
+                  <div class="text-right">Qty: 2</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex bg-[#b5b5b5] justify-between place-items-center my-2 p-1 rounded-md shadow-[#a5a5a5] shadow-md">
+              <img class="w-30 min-w-30 h-45 object-left rounded-sm" src="src/images/Featured/Item2/image-1.webp">
+              <div class="cart-item-details h-30 flex-[100%] object-right flex flex-col justify-between ml-5 p-2">
+                <div class="text-center text-wrap text-md">In Ur Web Weekender Bag</div>
+                <div class="text-right text-lg font-bold">$65</div>
+                <div class="flex justify-between">
+                  <button class="cursor-pointer w-fit text-gray-500 text-sm text-left">Remove</button>
+                  <div class="text-right">Qty: 2</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex bg-[#b5b5b5] justify-between place-items-center my-2 p-1 rounded-md shadow-[#a5a5a5] shadow-md">
+              <img class="w-30 min-w-30 h-45 object-left rounded-sm" src="src/images/Men/Item3/image-1.webp">
+              <div class="cart-item-details h-30 flex-[100%] object-right flex flex-col justify-between ml-5 p-2">
+                <div class="text-center text-wrap text-md">Play Pals Toys T-shirt</div>
+                <div class="text-right text-lg font-bold">$35</div>
+                <div class="flex justify-between">
+                  <button class="cursor-pointer w-fit text-gray-500 text-sm text-left">Remove</button>
+                  <div class="text-right">Qty: 1</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex bg-[#b5b5b5] justify-between place-items-center my-2 p-1 rounded-md shadow-[#a5a5a5] shadow-md">
+              <img class="w-30 min-w-30 h-45 object-left rounded-sm" src="src/images/Women/Item3/image-1.webp">
+              <div class="cart-item-details h-30 flex-[100%] object-right flex flex-col justify-between ml-5 p-2">
+                <div class="text-center text-wrap text-md">Emerald Envy Mini Dress</div>
+                <div class="text-right text-lg font-bold">$63</div>
+                <div class="flex justify-between">
+                  <button class="cursor-pointer w-fit text-gray-500 text-sm text-left">Remove</button>
+                  <div class="text-right">Qty: 3</div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <button class="justify-center w-fit mb-25 mt-10 bg-pop rounded-full px-4 py-2 text-white cursor-pointer shadow-gray-600 shadow-md">Checkout</button>
+        </div>
       </div>
 
     </div>
