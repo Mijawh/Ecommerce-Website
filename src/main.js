@@ -119,6 +119,8 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+
+
 // Hamburger Menu
 const hamburger = document.querySelector('.hamburger');
 const offScreenMenu = document.querySelector('.off-screen-menu');
@@ -136,15 +138,10 @@ hamburgerItems.forEach((item) => {
   });
 });
 
-// Cart Menu
-const cartButton = document.querySelector('.cart-js');
-const cartMenu = document.querySelector('.cart-sidebar');
 
-cartButton.addEventListener('click', () => {
-  cartMenu.classList.toggle('hidden');
-  cartMenu.classList.toggle('menu-transition');
-});
 
+
+// Create the elements for each section of the products
 function createItemElements(product) {
 
   let productHTML = '';
@@ -156,7 +153,10 @@ function createItemElements(product) {
       <div class="p-2 font-semibold text-md">${product.name}</div>
       <div class="mt-4 flex flex-row justify-between px-1">
         <p class="font-semibold text-xl">$${product.price}</p>
-        <button class="py-1 px-4 bg-[#450d0d] text-white rounded-full cursor-pointer shadow-[#7b7b7b] shadow-sm">Add</button>
+        <button class="py-1 px-4 bg-[#450d0d] text-white rounded-full cursor-pointer shadow-[#7b7b7b] shadow-sm js-add-to-cart"
+        data-product-id="${product.id}">
+          Add
+        </button>
       </div>
     </a>
   `
@@ -184,5 +184,119 @@ products.forEach((product) => {
     document.querySelector('.womens-carousel').innerHTML = womensHTML;
   }
   
-
 });
+
+
+
+// Cart Sidebar
+const cartButton = document.querySelector('.cart-js');
+const cartMenu = document.querySelector('.cart-sidebar');
+
+cartButton.addEventListener('click', () => {
+  cartMenu.classList.toggle('hidden');
+  cartMenu.classList.toggle('menu-transition');
+});
+
+
+
+// Generate Cart HTML
+let cart = JSON.parse(localStorage.getItem('cart'));
+
+if (!cart) {
+  cart = [];
+}
+
+function saveToStorage() {
+  localStorage.setItem('cart', JSON.stringify(cart));
+}
+
+function addToCart(productId) {
+  let matchingItem;
+
+  cart.forEach((cartItem) => {
+    if (productId === cartItem.productId) {
+      matchingItem = cartItem;
+    }
+  });
+
+  if (matchingItem) {
+    matchingItem.quantity++
+  } else {
+    cart.push({
+      productId: productId,
+      quantity: 1
+    });
+  }
+
+  saveToStorage();
+}
+
+function removeFromCart(productId) {
+  const newCart = [];
+
+  cart.forEach((cartItem) => {
+    if (cartItem.productId !== productId) {
+      newCart.push(cartItem);
+    }
+  });
+
+  cart = newCart;
+
+  saveToStorage();
+}
+
+let cartHTML = '';
+updateCart();
+
+function updateCart() {
+  cartHTML = '';
+
+  cart.forEach((cartItem) => {
+    const productId = cartItem.productId;
+
+    let matchingProduct;
+
+    products.forEach((product) => {
+      if (product.id == productId) {
+        console.log('match found');
+        matchingProduct = product;
+      }
+    });
+
+    cartHTML += `
+      <div class="cart-item-${matchingProduct.id} flex bg-[#b5b5b5] justify-between place-items-center my-2 p-1 rounded-md w-full shadow-[#a5a5a5] shadow-md">
+        <img class="w-30 min-w-30 h-45 object-left rounded-sm" src="${matchingProduct.image}">
+        <div class="cart-item-details h-30 flex-[100%] object-right flex flex-col justify-between ml-5 p-2">
+          <div class="text-center text-wrap text-md">${matchingProduct.name}</div>
+          <div class="text-right text-lg font-bold">$${matchingProduct.price}</div>
+          <div class="flex justify-between">
+            <button class="cursor-pointer w-fit text-gray-500 text-sm text-left js-delete-link" data-product-id="${matchingProduct.id}">Remove</button>
+            <div class="text-right">Qty: ${cartItem.quantity}</div>
+          </div>
+        </div>
+      </div>
+    `;
+  });
+
+  document.querySelector('.cart-items').innerHTML = cartHTML;
+
+  document.querySelectorAll('.js-delete-link').forEach((link) => {
+    link.addEventListener('click', () => {
+      const productId = link.dataset.productId;
+      removeFromCart(productId);
+
+      const container = document.querySelector(`.cart-item-${productId}`);
+      container.remove;
+      updateCart();
+    });
+  });
+}
+
+document.querySelectorAll('.js-add-to-cart')
+  .forEach((button) => {
+    button.addEventListener('click', () => {
+      const productId = button.dataset.productId;
+      addToCart(productId);
+      updateCart();
+    });
+  });
