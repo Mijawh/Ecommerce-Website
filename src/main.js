@@ -258,7 +258,6 @@ function updateCart() {
 
     products.forEach((product) => {
       if (product.id == productId) {
-        console.log('match found');
         matchingProduct = product;
       }
     });
