@@ -277,6 +277,14 @@ function updateCart() {
     `;
   });
 
+  if (cartHTML) {
+    document.querySelector('.checkout-button').innerHTML = `
+      <button class="justify-center w-fit bg-pop rounded-full px-4 py-2 text-white cursor-pointer shadow-gray-600 shadow-md"><a href="checkout.html">Checkout</a></button>
+    `;
+  } else if (!cartHTML) {
+    document.querySelector('.checkout-button').innerHTML = "";
+  }
+
   document.querySelector('.cart-items').innerHTML = cartHTML;
 
   document.querySelectorAll('.js-delete-link').forEach((link) => {

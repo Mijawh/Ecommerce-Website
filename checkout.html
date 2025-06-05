@@ -17,7 +17,7 @@
   <script type="module" src="./src/checkout.js" defer></script>
 
 </head>
-<body class="checkout-body">
+<body class="checkout-body min-h-[100vh]">
 
   <!--Header/Nav Bar-->
   <div class="flex justify-center place-self-center text-xs md:text-base lg:text-lg w-full h-20 bg-white sticky top-0 px-4 md:py-4 md:px-6 shadow-black drop-shadow-lg z-100">
@@ -28,106 +28,24 @@
 
   <div class="checkout-container flex flex-col md:flex-row justify-between p-0 md:p-3 place-self-center w-full max-w-[1400px] place-items-center">
 
-      <div class="cart-checkout-items flex flex-col flex-1 m-[5%] place-items-center max-w-[600px] min-w-[400px] ">
-
-        <!-- <div class="checkout-item-container flex justify-between bg-secondary py-1 md:py-3 px-1 md:px-5 rounded-md max-w-[500px] min-w-[400px] w-full my-2 text-sm md:text-md shadow-black shadow-md">
-
-          <div class="checkout-item flex">
-
-            <div>
-              <img class="w-30 rounded-sm" src="src/images/Featured/Item1/image-1.webp">
-            </div>
-
-          </div>
-
-          <div class="shipping-options flex flex-col place-self-center m-3">
-
-            <div class="my-2">
-              <input class="mr-5" type="checkbox"></input>1 day shipping
-            </div>
-
-            <div class="my-2">
-              <input class="mr-5" type="checkbox"></input>2 day shipping
-            </div>
-
-            <div class="my-2">
-              <input class="mr-5" type="checkbox"></input>FREE 7 day shipping
-            </div>
-
-          </div>
-
-        </div>
-
-        <div class="checkout-item-container flex justify-between bg-secondary py-1 md:py-3 px-1 md:px-5 rounded-md max-w-[500px] min-w-[400px] w-full my-2 text-sm md:text-md shadow-black shadow-md">
-
-          <div class="checkout-item flex">
-
-            <div>
-              <img class="w-30 rounded-sm" src="src/images/Featured/Item1/image-1.webp">
-            </div>
-
-          </div>
-
-          <div class="shipping-options flex flex-col place-self-center m-3">
-
-            <div class="my-2">
-              <input class="mr-5" type="checkbox"></input>1 day shipping
-            </div>
-
-            <div class="my-2">
-              <input class="mr-5" type="checkbox"></input>2 day shipping
-            </div>
-
-            <div class="my-2">
-              <input class="mr-5" type="checkbox"></input>FREE 7 day shipping
-            </div>
-
-          </div>
-
-        </div> -->
+      <div class="cart-checkout-items flex flex-col flex-1 m-[2%] md:m-[5%] place-items-center max-w-[600px] min-w-[400px] ">
 
       </div>
 
-    <div class="checkout-total flex flex-col md:m-[5%] flex-1 place-items-center max-w-[600px] min-w-[300px] w-full md:place-self-start">
+    <div class="checkout-total flex flex-col m-[2%] md:m-[5%] flex-1 place-items-center max-w-[600px] min-w-[0px] w-full md:place-self-start">
 
-      <div class="checkout-item-prices flex flex-col py-3 px-3 bg-secondary rounded-md my-2 w-full max-w-[600px] shadow-black shadow-md">
+      <div class="checkout-item-prices flex flex-col mx-[2%] py-3 px-3 bg-secondary rounded-md my-2 w-full max-w-[600px] shadow-black shadow-md">
 
-        <div class="flex justify-between py-3 px-[1%] w-full max-w-[600px]">
-          <div>item name</div>
-          <div>$55</div>
-        </div>
+        <div class="place-self-center">Seems like there aren't any items in your cart!</div>
 
-        <div class="flex justify-between py-3 px-[1%] w-full max-w-[600px]">
-          <div>item name</div>
-          <div>$55</div>
-        </div>
-
-        <div class="flex justify-between py-3 px-[1%] w-full max-w-[600px]">
-          <div>item name</div>
-          <div>$55</div>
-        </div>
-
-        <div class="flex justify-between py-3 px-[1%] w-full max-w-[600px]">
-          <div>item name</div>
-          <div>$55</div>
-        </div>
-
-        <div class="bg-black w-[98%] h-0.5 place-self-center my-2"></div>
-
-        <div class="flex justify-between py-3 px-[1%] w-full max-w-[600px]">
-          <div>Total</div>
-          <div>$220</div>
-        </div>
       </div>
-
-      
 
     </div>
 
   </div>
 
   <div class="place-self-center">
-    <button class="bg-pop px-5 py-2 rounded-full text-white text-xl cursor-pointer mt-6 mb-7 shadow-black shadow-md">Finish & Pay</button>
+    <button class="purchase-button bg-pop px-5 py-2 rounded-full text-white text-xl cursor-pointer mt-6 mb-7 shadow-black shadow-md"><a href="/index.html">Finish & Pay</a></button>
   </div>
 
 </body>
